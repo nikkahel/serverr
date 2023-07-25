@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 // Ваш токен бота, полученный от BotFather
-const token = 'YOUR_BOT_TOKEN';
+const token = '6545548439:AAGzoqXEPID3A_sAr_UkPJRv0KwCVviLbKs';
 const bot = new TelegramBot(token, { polling: true }); // Set polling interval to 1000ms (1 second)
 
 // Создаем веб-приложение с использованием Express.js
@@ -15,10 +15,11 @@ app.use(bodyParser.json());
 bot.onText(/\/start/, (msg) => {
     const chatId = msg.chat.id;
     // Отправляем сообщение с Inline кнопкой "Открыть WebApp"
-    bot.sendMessage(chatId, 'Откройте WebApp', {
+    bot.sendPhoto(chatId, 'https://wmewww.onrender.com', {
+        caption: 'Откройте WebApp',
         reply_markup: {
             inline_keyboard: [
-                [{ text: 'Открыть WebApp', url: 'https://wmewww.onrender.com' }] // Замените на URL вашей HTML страницы
+                [{ text: 'Открыть WebApp', url: 'https://wmewww.onrender.com' }]
             ]
         }
     });
