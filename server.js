@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 
 // Ваш токен бота, полученный от BotFather
-const token = '6571989781:AAEfD0aTpVmOxlAX2pMmGYRtH2WVySXJ4os';
+const token = '6545548439:AAGzoqXEPID3A_sAr_UkPJRv0KwCVviLbKs';
 const bot = new TelegramBot(token, { polling: true }); // Set polling interval to 1000ms (1 second)
 
 
